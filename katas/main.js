@@ -82,16 +82,23 @@ arr(5);
 arr(0);
 arr();
 
-/*Given a number n, return the number of positive odd numbers below n, EASY!
+//Given a number n, return the number of positive odd numbers below n, EASY!
 
-  Examples (Input -> Output)
-7  -> 3 (because odd numbers below 7 are [1, 3, 5])
-15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
-Expect large Inputs!*/
+//Examples (Input -> Output)
+//7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+//15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+//Expect large Inputs!
+
+//Given a number n, return the number of positive odd numbers below n, in minimum time!
+
 console.log("---------Count Odd Numbers below n---------");
 
 function oddCount(n) {
-  // your code here
+  if (n % 2 === 0) {
+    console.log(n / 2);
+  } else {
+    console.log((n - 1) / 2);
+  }
 }
 
 oddCount(7);
