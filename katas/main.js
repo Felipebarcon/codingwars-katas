@@ -102,3 +102,76 @@ function oddCount(n) {
 }
 
 oddCount(7);
+
+/*
+Messi goals function
+Messi is a soccer player with goals in three leagues:
+
+  LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in all three leagues.
+
+  Note: the input will always be valid.
+
+  For example:
+
+  5, 10, 2  -->  17
+  */
+
+console.log("---------Messi goals function---------");
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+/*
+Very simple, given an integer or a floating-point number, find its opposite.
+
+  Examples:
+
+1: -1
+14: -14
+-34: 34
+*/
+
+console.log("---------Opposite number---------");
+
+function opposite(number) {
+  return -number;
+}
+
+/*
+Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most
+secret question is still correct. However, since someone could look over your shoulder,
+you don't want that shown on your screen. Instead, we mask it.
+
+Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+  Examples
+"4556364607935616" --> "############5616"
+"64607935616" -->      "#######5616"
+"1" -->                "1"
+"" -->                 ""
+
+// "What was the name of your first pet?"
+
+"Skippy" --> "##ippy"
+
+"Nananananananananananananananana Batman!"
+-->
+"####################################man!"
+*/
+
+console.log("---------Credit Card Mask---------");
+
+function maskify(cc) {
+  const output = cc
+    .split("")
+    .slice(cc.length > 4 ? -4 : -cc.length)
+    .join("")
+    .padStart(cc.length, "#");
+  console.log(output);
+}
+
+maskify("");
